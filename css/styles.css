@@ -6,7 +6,7 @@ body{
   color: #fff;
 }
 .container-fluid{
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 h1{
   font-family: 'Montserrat-Black 900', sans-serif;
@@ -48,12 +48,17 @@ p{
 }
 /* Title Image */
 .title-image{
-  width:60%;
+  /* width:60%; */
   transform: rotate(25deg);
+  /* z-index:-1; */
+  position:absolute;
 }
 /* Features */
 #features{
   padding: 7% 15%;
+  background-color: #fff;
+  position:relative;
+  z-index:1;
 }
 .feature-box{
   text-align:center;
@@ -92,4 +97,19 @@ p{
  /* Pricing */
  #pricing{
    padding:100px;
+   text-align:center;
  }
+ .pricing-column{
+   padding:3% 2%;
+ }
+ /* media queries */
+@media (max-width:1028px){
+  #title{
+    text-align:center;
+  }
+  .title-image {
+    position:static;
+    transform:rotate(0);
+  }
+
+}
